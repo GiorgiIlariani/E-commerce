@@ -1,0 +1,145 @@
+/*  carts */
+.carts-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.carts-container>* {
+    margin: 0 auto;
+}
+
+.carts-container img {
+    width: 80px;
+}
+
+.carts-container h6 {
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 12px;
+}
+
+.price-container .price {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.remove .trash-icon {
+    font-size: 1rem;
+    color: hsl(360, 71%, 66%);
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.remove .trash-icon:hover {
+    color: hsl(360, 67%, 44%);
+    transform: scale(1.15);
+}
+
+.quantity button {
+    padding: 6px 10px;
+    margin: 0 4px;
+    background: transparent;
+    border: 1px solid;
+    transition: 0.3s;
+}
+
+.quantity button:hover {
+    color: #fff;
+    background-color: black;
+}
+
+/* clear cart btn */
+.clear-carts {
+    cursor: pointer;
+    border: 1px solid crimson;
+    color: crimson;
+    width: 170px;
+    padding: 10px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 7rem;
+    margin-bottom: 10px;
+}
+
+.clear-carts:hover {
+    background-color: crimson;
+    color: #fff;
+}
+
+.right-side-info {
+    float: right;
+    margin-bottom: 3rem;
+}
+
+.tax-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+
+.paypal {
+    background-color: rgb(246, 211, 56);
+    border: none;
+    padding: 0.4rem 0;
+    width: 200px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.paypal span {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.paypal p {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+
+.paypal .pay {
+    color: rgb(8, 28, 103);
+}
+
+
+.paypal .pal {
+    color: rgb(93, 152, 214);
+}
+
+
+@media only screen and (max-width: 745px) {
+    .carts-container h6 {
+        display: none;
+    }
+
+    .carts-container>* {
+        margin: 6px 0;
+        font-size: 1.25rem;
+    }
+
+    .carts-container {
+        grid-template-columns: 1fr;
+        margin: 1rem 0;
+    }
+
+    .right-side-info {
+        float: none;
+        text-align: center;
+    }
+
+    .clear-carts {
+        margin: 1rem auto;
+    }
+}

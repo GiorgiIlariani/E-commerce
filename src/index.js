@@ -1,19 +1,16 @@
 import React from "react";
 import App from "./App";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-// import { BrowserRouter } from "react-router-dom";
-// import { AppProvider } from "./pages/context";
-
+import { BrowserRouter } from "react-router-dom";
+import { AppProvider } from "./components/context";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
-  // <BrowserRouter>
-  //   <AppProvider>
-  //     <App />
-  //   </AppProvider>
-  // </BrowserRouter>
-  <App />
+  <AppProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </AppProvider>
 );
